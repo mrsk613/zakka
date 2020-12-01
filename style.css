@@ -5,6 +5,11 @@
 
 html{
     font-size: 62.5%;
+    color:#333;
+}
+
+img{
+    width:100%;
 }
 
 .header-bk{
@@ -18,10 +23,165 @@ html{
     opacity:0.7;
 }
 
+.logo img{
+    width:300px;
+    height: auto;
+}
+
+.gnav {
+    display: flex;
+    height: 3rem;
+    margin: 0 auto;
+    width: 980px;
+    padding: 10px 0;
+}
+.gnav > li {
+    width: 25%;
+}
+/*全てのリスト・リンク共通*/
+.gnav li {
+    list-style: none;
+    position: relative;
+}
+
+/*子階層以降共通*/
+.gnav li li {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.gnav li:hover > ul > li {
+    height: 3rem;
+    overflow: visible;
+}
+
+.gnav > li > ul:before{/*子階層*/
+    border: 5px solid transparent;
+    border-top: 5px solid #fff;
+    content: "";
+    right: 1rem;
+    position: absolute;
+    top: 1rem;
+    transform: translateY(-40%);
+}
+
+#main{
+    padding-top:18rem;
+}
+
+.con980{
+    width:980px;
+    margin:0 auto;
+}
+
+.con600{
+    width:600px;
+    margin:0 auto;
+}
+
+.bk-w{
+    background:#FFF;
+}
+
+.w50{
+    width:30%;
+}
+
+.box-warpper{
+    text-align: center;
+    margin-bottom:30px;
+}
+
+.box-3{
+    display:inline-block;
+    width:32%;
+}
+
+.box-4{
+    display:inline-block;
+    width:24%;
+}
+
+.box-5{
+    display:inline-block;
+    width: 20%;
+}
+
 /*xmas2020*/
+
+.bk-g{
+    background:#3cb371;
+}
+
 .xmas-h{
     width:100%;
     background:rgba(255,89,89,0.7);
     border-bottom:solid 4px #FFF;
     text-align:center;
+}
+
+.xmas-h .gnav li a{
+    color:#FFF;
+    font-size:2rem;
+    line-height: 2rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.xmas-h .gnav li a:hover{
+    background: rgba(255,255,255,0.5);
+}
+
+.xmas-h .gnav li li {
+    background: rgba(255,89,89,0.7);
+    font-size:1.5rem;
+}
+
+.xmas-h .gnav > li > ul:before{/*子階層*/
+    border: 5px solid transparent;
+    border-top: 5px solid #fff;
+    content: "";
+    right: 1rem;
+    position: absolute;
+    top: 1rem;
+    transform: translateY(-40%);
+}
+
+.xmas-h .gnav > li {
+    border-left:solid 1px #FFF;
+}
+
+.xmas-h .gnav > li:last-child{
+    border-right:solid 1px #FFF;
+}
+
+#item, #price, #rank{
+    text-align: center;
+}
+
+#about p{
+    text-align: center;
+    font-size:1.8rem;
+}
+
+#item p,#price p, #rank p{
+    font-size:1.5rem;
+    line-height: 2.2rem;
+}
+
+#item h2, #price h2{
+    font-size:2.2rem;
+}
+
+#item h3{
+    background:#3cb371;
+    color:#FFF;
+    font-size:2rem;
+    width:40%;
+    margin:10px auto;
+    border-radius: 10px;
+    font-weight: bold;
 }
