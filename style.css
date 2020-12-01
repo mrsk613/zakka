@@ -6,3 +6,17 @@
 html{
     font-size: 62.5%;
 }
+
+.header-bk{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+
+/*xmas2020*/
+.xmas-h{
+    width:100%;
+    background:rgba(255,89,89,0.7);
+    border-bottom:solid 4px #FFF;
+}
