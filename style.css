@@ -12,6 +12,58 @@ img{
     width:100%;
 }
 
+.zakka{
+    border-bottom:solid 2px #054F52;
+}
+
+.m20{
+    margin-top:20px;
+}
+
+.btn,.btn a {
+    display: block;
+    width:400px;
+    margin:0 auto;
+    height: auto;
+    font-weight: 700;
+    font-size:2rem;
+    border:solid 1px #054F52;
+    border-radius: 50px;
+    color:#054F52;
+    text-decoration: none;
+    box-shadow: 3px 3px 0 #054F52;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn:hover,.btn a:hover{
+    color:#FFF;
+    background:#054F52;
+    box-shadow: none;
+}
+
+.btn2,.btn2 a {
+    display: block;
+    width:400px;
+    margin:0 auto;
+    height: auto;
+    font-weight: 700;
+    font-size:2rem;
+    border:solid 1px #5B8385;
+    border-radius: 50px;
+    color:#5B8385;
+    text-decoration: none;
+    box-shadow: 3px 3px 0 #5B8385;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn2:hover,.btn2 a:hover{
+    color:#FFF;
+    background:#5B8385;
+    box-shadow: none;
+}
+
 .header-bk{
     position: fixed;
     margin: 0;
@@ -22,7 +74,7 @@ img{
 
 .header{
     width:100%;
-    background:rgba(255,255,255,0.7);
+    background:rgba(255,255,255,0.8);
     border-bottom:solid 4px #054F52;
     text-align:center;
 }
@@ -79,7 +131,7 @@ img{
 }
 
 .header .gnav li li {
-    background: rgba(255, 255, 255,0.7);
+    background: rgba(255, 255, 255,0.8);
     font-size:1.2rem;
 }
 
@@ -106,6 +158,7 @@ img{
 .con980{
     width:980px;
     margin:0 auto;
+    padding:20px 0;
 }
 
 .con600{
@@ -115,6 +168,10 @@ img{
 
 .bk-w{
     background:#FFF;
+}
+
+.bg-b{
+    background:#D5DBEB;
 }
 
 .w50{
@@ -159,6 +216,11 @@ img{
     padding-bottom:30px;
 }
 
+.box-2{
+    display:inline-block;
+    width:48%;
+}
+
 .box-3{
     display:inline-block;
     width:32%;
@@ -173,6 +235,7 @@ img{
     display:inline-block;
     width: 18%;
     margin:5px;
+    vertical-align: top;
 }
 
 .box-3 a:hover, .box-4 a:hover, .box-5 a:hover{
@@ -192,14 +255,14 @@ h2 span{
     margin-bottom:10px;
 }
 
-.news h2,#ranking h2,#new h2{
+.news h2,#ranking h2,#new h2,#service h2{
     font-size:2.2rem;
     margin:5px;
     border-bottom: solid 3px #00B89F;
     position: relative;
 }
 
-.news h2::after, #ranking h2::after,#new h2::after {
+.news h2::after, #ranking h2::after,#new h2::after,#service h2::after {
     position: absolute;
     content: " ";
     display: block;
@@ -208,10 +271,9 @@ h2 span{
     width: 20%;
 }
 
-.news li{
-    display:inline-block;
+.news p{
     font-size:1.5rem;
-    padding:10px;
+    padding:5px 10px;
 }
 
 .news a{
@@ -238,6 +300,17 @@ h2 span{
     opacity: 0.7;
 }
 
+.item{
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.small{
+    font-size:1.2rem;
+    text-align: left;
+    color:#555;
+}
+
 .position {/*親div*/
     position: relative;/*相対配置*/
 }
@@ -261,6 +334,51 @@ h2 span{
 .position img {
     width: 100%;
     padding:10px;
+}
+
+.service{
+    border:solid 3px #5B8385;
+    border-radius: 15px;
+    text-align: center;
+    padding:10px;
+}
+
+.service p {
+    font-size:1.5rem;
+    font-weight: 600;
+}
+
+.service i{
+    color:#5B8385;
+}
+
+#other h2 {
+    font-size:2.2rem;
+    border-bottom:solid 2px #FFF;
+    margin:15px;
+    padding-top:10px;
+}
+
+.circle{
+    display: inline-block;
+    text-decoration: none;
+    background: #FFF;
+    color: #045F52;
+    font-size: 2rem;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #FFF;
+    border: dashed 1px #045F52;
+    transition: .4s;
+}
+
+.circle:hover{
+    background: #668ad8;
+    box-shadow: 0px 0px 0px 5px #668ad8;
 }
 
 footer img{
@@ -351,7 +469,7 @@ footer .box-3 ul{
 
 /*xmas2020*/
 .bk-g{
-    background:#3cb371;
+    background:#33cc66;
 }
 
 .xmas-h{
@@ -417,7 +535,7 @@ footer .box-3 ul{
 }
 
 #item h3{
-    background:#3cb371;
+    background:#33cc66;
     color:#FFF;
     font-size:2rem;
     width:40%;
