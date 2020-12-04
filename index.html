@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/func_slick.js"></script>
     <title>ZAKKA SHOP</title>
 </head>
 <body>
@@ -43,13 +49,14 @@
     </header>
     <main id="main">
         <div class="con980">
-        <div id="slider">
-            <div class="slider-wrapper">
-                <div class="slide-item"><a href="#"><img src="image/main1.png" alt="福袋発売中"></a></div>
-                <div class="slide-item"><a href="#"><img src="image/main2.png" alt="ウィンターセール開催中"></a></div>
-                <div class="slide-item"><a href="#"><img src="image/main3.png" alt="予約販売アイテム"></a></div>
-            </div>
-        </div>
+        <!--スライダーの記述-->
+        <ul class="slider">
+            <li><a href="#"><img src="image/main1.png"></a></li>
+            <li><a href="#"><img src="image/main2.png"></a></li>
+            <li><a href="#"><img src="image/main3.png"></a></li>
+        </ul>
+  <!--スライダーの記述ここまで-->
+
         <div class="news m20">
             <h2>News<span>ニュース</span></h2>
             <div class="bg-g">
@@ -150,6 +157,37 @@
             </div>
             <div class="btn"><a href="#">more</a></div>
         </section>
+        <section id="pickup" class="m20">
+            <h2>Pickup Items<span>おすすめアイテム</span></h2>
+            <div class="box-warpper">
+                <div class="box-5">
+                    <a href="#"><img src="image/acc3.jpg" alt="ピアス"></a>
+                    <p class="item">シェルピアス</p>
+                    <p class="small">￥1,500（税込）</p>
+                </div>
+                <div class="box-5">
+                    <a href="#"><img src="image/acc1.png" alt="指輪"></a>
+                    <p class="item">リング</p>
+                    <p class="small">￥1,200（税込）</p>
+                </div>
+                <div class="box-5">
+                    <a href="#"><img src="image/mak1.jpg" alt="ブラシセット"></a>
+                    <p class="item">ブラシセット</p>
+                    <p class="small">￥800（税込）</p>
+                </div>
+                <div class="box-5">
+                    <a href="#"><img src="image/bag1.jpg" alt="トートバッグ"></a>
+                    <p class="item">トートバッグ</p>
+                    <p class="small">￥1,100（税込）</p>
+                </div>
+                <div class="box-5">
+                    <a href="#"><img src="image/car2.png" alt="財布"></a>
+                    <p class="item">財布</p>
+                    <p class="small">￥1,200（税込）</p>
+                </div>
+            </div>
+            <div class="btn"><a href="#">more</a></div>
+        </section>
         <section id="new" class="m20">
             <h2>New Items<span>新商品</span></h2>
             <div class="box-warpper">
@@ -233,7 +271,7 @@
             <div class="box-4">
                 <div class="service">
                     <i class="fas fa-mobile-alt fa-5x m20"></i>
-                    <p class="m20">無料！<br>公式アプリ</p>
+                    <p class="m20">＼ Andoroid対応 ／<br>公式アプリ</p>
                 </div>
             </div>
         </div>
@@ -241,23 +279,30 @@
         </section>
         <section id="other">
             <div class="box-warpper m20">
-                    <div class="bg-b">
-                        <h2>Recruit<span>採用情報</span></h2>
-                        <div class="con600">
-                        <div class="box-warpper">
-                            <div class="box-3">
-                                <a href="#" class="circle">新卒採用</a>
-                            </div>
-                            <div class="box-3">
-                                <a href="#" class="circle">中途採用</a>
-                            </div>
-                            <div class="box-3">
-                                <a href="#" class="circle">アルバイト</a>
-                            </div>
+                <div class="box-2 bg-b">
+                        <h2>Instagram<span>インスタグラム</span></h2>
+                        <p>店舗ごとに更新しております。お近くの店舗をご覧ください！</p>
+                        <div class="box-3">
+                            <a href="#" class="circle">渋谷店</a>
                         </div>
-                    </div>
+                        <div class="box-3">
+                            <a href="#" class="circle">柏店</a>
+                        </div>
+                        <div class="box-3">
+                            <a href="#" class="circle">横浜店</a>
+                        </div>
                 </div>
+                <div class="box-2 bg-b">
+                    <h2>Mail Magazin<span>メールマガジン</span></h2>
+                    <p>週1回新着情報や再入荷アイテム、<br>
+                        お役立ち情報などを配信しております！<br>
+                        購読は無償ですので、お気軽の購読ください！
+                    </p>
+                        <div class="p20 m20">
+                            <a href="#" class="btn2">購読する</a>
+                        </div>
                 </div>
+            </div>
         </section>
     </div>
     </main>
