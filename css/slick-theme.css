@@ -2,40 +2,25 @@
 /* Slider */
 .slick-loading .slick-list
 {
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
+    background: #fff url('/ajax-loader.gif') center center no-repeat;
 }
 
-/* Icons */
-@font-face
-{
-    font-family: 'slick';
-    font-weight: normal;
-    font-style: normal;
-
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
-}
 /* Arrows */
 .slick-prev,
 .slick-next
 {
     font-size: 0;
     line-height: 0;
-
     position: absolute;
     top: 50%;
-
     display: block;
-
     width: 20px;
     height: 20px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
-
     cursor: pointer;
-
     color: transparent;
     border: none;
     outline: none;
@@ -87,11 +72,15 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    font-family: "Font Awesome 5 Free";
+    content: '\f137';
+    font-weight: 900;
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    font-family: "Font Awesome 5 Free";
+    content: '\f137';
+    font-weight: 900;
 }
 
 .slick-next
@@ -105,11 +94,15 @@
 }
 .slick-next:before
 {
-    content: '→';
+    font-family: "Font Awesome 5 Free";
+    content: '\f138';
+    font-weight: 900;
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    font-family: "Font Awesome 5 Free";
+    content: '\f138';
+    font-weight: 900;
 }
 
 /* Dots */
@@ -176,8 +169,7 @@
 }
 .slick-dots li button:before
 {
-    ont-family: 'slick';
-    font-size: 6px; /* ページャーの大きさ */
+    font-size: 10px; /* ページャーの大きさ */
     line-height: 20px;
  
     position: absolute;
