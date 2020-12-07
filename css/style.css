@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -26,6 +27,10 @@ img{
 
 .pc_only{
     display:block;
+}
+
+.sp_only{
+    display: none;
 }
 
 .btn,.btn a {
@@ -99,7 +104,7 @@ img{
 
 .gnav {
     display: flex;
-    height: 3rem;
+    height: 4rem;
     margin: 0 auto;
     width: 980px;
     padding: 10px 0;
@@ -160,6 +165,11 @@ img{
 .header .gnav > li:last-child{
     border-right:solid 1px #054F52;
 }
+
+.drawer{
+    display: none;
+}
+
 #main{
     padding-top:18rem;
 }
@@ -188,39 +198,6 @@ img{
     width:30%;
 }
 
-#slider{
-    width: 980px; 
-    height: 500px; 
-    overflow: hidden; 
-    background: #FFF;
-}
-
-.slide-item { 
-    width: 980px; 
-    height: 500px; 
-    float: left; 
-    position: relative; 
-    background: #FFF;
-    color: #FFF;
-    display: flex;
-    align-items: center;
-}
-
-.slider-wrapper { 
-    width: 300%; 
-    position: relative; 
-    left: 0; 
-    will-change: transform; 
-    animation: slider 20s infinite; 
-}
-
-@keyframes slider { 
-    0% { transform: translateX(0); } 
-    33% { transform: translateX(-980px); } 
-    66% { transform: translateX(-1960px); } 
-    100% { transform: translateX(0); } 
-}
-
 .box-warpper{
     text-align: center;
     padding-bottom:30px;
@@ -245,8 +222,20 @@ img{
 .box-5{
     display:inline-block;
     width: 18%;
+    vertical-align: top;
+}
+
+#rank .box-5:last-child,
+#ranking .box-5:last-child,
+#new .box-5:last-child {
+    display:inline-block;
+    width: 18%;
     margin:5px;
     vertical-align: top;
+}
+
+#pickup .box-5:last-child{
+    display: none;
 }
 
 .box-3 a:hover, .box-4 a:hover, .box-5 a:hover{
@@ -493,7 +482,7 @@ footer .box-3 ul{
 
 /*xmas2020*/
 .bk-g{
-    background:#33cc66;
+    background:#3cb371;
 }
 
 .xmas-h{
@@ -559,7 +548,7 @@ footer .box-3 ul{
 }
 
 #item h3{
-    background:#33cc66;
+    background:#3cb371;
     color:#FFF;
     font-size:2rem;
     width:40%;
@@ -575,6 +564,28 @@ footer .box-3 ul{
 
 #item h3 a:hover{
     text-decoration: underline;
+}
+
+#rank .btn, #rank .btn a {
+    display: block;
+    width:400px;
+    margin:0 auto;
+    height: auto;
+    font-weight: 700;
+    font-size:2rem;
+    border:solid 1px #3cb371;
+    border-radius: 50px;
+    color:#3cb371;
+    text-decoration: none;
+    box-shadow: 3px 3px 0 #3cb371;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#rank .btn:hover,#rank .btn a:hover{
+    color:#FFF;
+    background:#3cb371;
+    box-shadow: none;
 }
 
 #xmas-f{
@@ -632,18 +643,32 @@ footer .box-3 ul{
 
 /* smart phone */
 @media screen and (max-width:600px){
+
+    .header,.xmas-h{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .ml50{
+        margin-left: 50px;
+    }
+
     .pc_only{
         display:none;
     }
+
+    .sp_only{
+        display:block;
+    }
     
     .btn,.btn a {
-        display: block;
         width:200px;
         font-size:1.5rem;
     }
         
     .btn2,.btn2 a {
-        display: block;
         width:200px;
         font-size:1.5rem;
     }
@@ -656,450 +681,275 @@ footer .box-3 ul{
     .gnav {
         display: none;
     }
+
+    .drawer{
+        display:block;
+    }
+    
+    .drawer-hidden {
+        display: none;
+    }
+
+    .drawer-open {
+        display: flex;
+        height: 50px;
+        width: 5px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .header .drawer-open span,
+    .header .drawer-open span:before,
+    .header .drawer-open span:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 25px;
+      border-radius: 3px;
+      background: #054F52;
+      transition: 0.5s;
+      position: absolute;
+    }
+    
+    .drawer-open span:before {
+      bottom: 8px;
+    }
+  
+  /* 三本線のうち一番下の棒の位置調整 */
+  .drawer-open span:after {
+      top: 8px;
+    }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer-check:checked ~ .drawer-open span {
+      background: rgba(255, 255, 255, 0);
+    }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer-check:checked ~ .drawer-open span::before {
+      bottom: 0;
+      transform: rotate(45deg);
+    }
+    
+    #drawer-check:checked ~ .drawer-open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    
+  /* メニューのデザイン*/
+   .header .drawer-content {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      right: 100%;
+      z-index: 99;
+      background:rgba(255, 255, 255,0.8);
+      transition: .5s;
+    }
+
+    .header .drawer-list{
+        margin-top:20px;
+        color:#054F52;
+        font-size: 2rem;
+        text-align: left;
+        list-style-type: none;
+    }
+
+    .header .drawer-item a{
+        display: block;
+        width:85%;
+        margin-left:50px;
+        box-sizing: border-box;
+        text-align: left;
+        font-size:2rem;
+        color:#054F52;
+        text-decoration: none;
+
+    }
+
+    .drawer-item .small{
+        font-size:1.5rem;
+        padding-left: 10px;
+    }
+  
+    .header .drawer-item a:hover{
+        background:rgba(5,79,82,0.5);
+    }
+
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer-check:checked ~ .drawer-content {
+      right: 0;
+    }
     
     #main{
-        padding-top:18rem;
+        padding-top:8rem;
     }
     
     .con980{
-        width:100%;
+        width:90%;
     }
     
     .con600{
         width:100%;
     }
-
-    #slider{
-        width: 100%; 
-        height: auto; 
-        overflow: hidden; 
-        background: #FFF;
-    }
-    
-    .slide-item { 
-        width: 100%; 
-        height: auto; 
-        float: left; 
-        position: relative; 
-        background: #FFF;
-        color: #FFF;
-        display: flex;
-        align-items: center;
-    }
-    
-    .slider-wrapper { 
-        width: 300%; 
-        position: relative; 
-        left: 0; 
-        will-change: transform; 
-        animation: slider 20s infinite; 
-    }
-    
-    @keyframes slider { 
-        0% { transform: translateX(0); } 
-        33% { transform: translateX(-980px); } 
-        66% { transform: translateX(-1960px); } 
-        100% { transform: translateX(0); } 
-    }
-    
-    .box-warpper{
-        text-align: center;
-        padding-bottom:30px;
-    }
     
     .box-2{
-        display:inline-block;
-        width:48%;
-        vertical-align: top;
-    }
-    
-    .box-3{
-        display:inline-block;
-        width:32%;
+        display:block;
+        width:100%;
     }
     
     .box-4{
         display:inline-block;
-        width:24%;
+        width:48%;
+        margin-bottom:5px;
     }
     
     .box-5{
         display:inline-block;
-        width: 18%;
-        margin:5px;
-        vertical-align: top;
+        width: 30%;
+        margin-bottom: 5px;;
     }
     
-    .box-3 a:hover, .box-4 a:hover, .box-5 a:hover{
-        opacity: 0.7;
+    #rank .box-5:last-child,
+    #ranking .box-5:last-child,
+    #new .box-5:last-child{
+        display:none;
     }
-    
-    h2 span{
-        font-size:1.5rem;
-        margin-left:10px;
-        font-weight: 500;
+
+    #pickup .box-5:last-child{
+        display: inline-block;
+        width: 30%;
     }
-    .news .bg-g {
-        width:100%;
-        background:#ededed;
-        border-radius: 10px;
-        box-sizing: border-box;
-        margin-bottom:10px;
-    }
-    
+
     .news h2,
     #ranking h2,
     #new h2,
     #pickup h2,
     #service h2{
-        font-size:2.2rem;
-        margin:5px;
-        border-bottom: solid 3px #00B89F;
-        position: relative;
-    }
-    
-    .news h2::after,
-    #ranking h2::after,
-    #new h2::after,
-    #pickup h2::after,
-    #service h2::after {
-        position: absolute;
-        content: " ";
-        display: block;
-        border-bottom: solid 3px #006658;
-        bottom: -3px;
-        width: 20%;
+        font-size:2rem;
     }
     
     .news p{
-        font-size:1.5rem;
-        padding:5px 10px;
-    }
-    
-    .news a{
-        color:#333;
-        text-decoration: none;
-    }
-    
-    .news a:hover{
-        text-decoration: underline;
-    }
-    
-    #banner {
-        padding-top:10px;
-        padding-bottom:10px;
-        text-align: center;
+        font-size:1.3rem;
     }
     
     #banner img {
-        width:80%;
-        margin:5px;
+        width:100%;
     }
-    
-    #banner a:hover{
-        opacity: 0.7;
-    }
-    
+
     .item{
-        font-size: 1.5rem;
-        text-align: left;
-    }
-    
-    .small{
-        font-size:1.2rem;
-        text-align: left;
-        color:#555;
-    }
-    
-    .position {/*親div*/
-        position: relative;/*相対配置*/
-    }
-      
-    .position p {
-        font-size: 12px;
-        font-weight: 400;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 31px;
-        height: 31px;
-        background-color: #ededed;
-        border-radius: 50%;
-        position: absolute;
-        left: 3px;
-        top: 3px;
-        z-index: 1;
-    }
-      
-    .position img {
-        width: 100%;
-        padding:10px;
-    }
-    
-    .service{
-        border:solid 3px #5B8385;
-        border-radius: 15px;
-        text-align: center;
-        padding:10px;
-    }
-    
-    .service p {
-        font-size:1.5rem;
-        font-weight: 600;
-    }
-    
-    .service i{
-        color:#5B8385;
-    }
-    
-    #other h2 {
-        font-size:2.2rem;
-        border-bottom:solid 2px #FFF;
-        margin:15px;
-        padding-top:10px;
+        font-size: 1.3rem;
     }
     
     #other p{
-        font-size: 1.2rem;
-    }
-    
-    .circle{
-        display: inline-block;
-        text-decoration: none;
-        background: #FFF;
-        color: #045F52;
-        font-size: 1.5rem;
-        width: 100px;
-        height: 100px;
-        line-height: 100px;
-        border-radius: 50%;
-        text-align: center;
-        overflow: hidden;
-        box-shadow: 0px 0px 0px 5px #FFF;
-        border: dashed 1px #045F52;
-        transition: .4s;
-        margin:10px;
-    }
-    
-    .circle:hover{
-        background: #f5f5f5;
-        box-shadow: 0px 0px 0px 5px #f5f5f5;
-    }
-    
-    footer img{
-        width:50%;
+        font-size: 1.3rem;
     }
     
     .icon{
         display:block;
-        width:20%;
+        width:40%;
         margin:0 auto;
         list-style: none;
     }
     
-    .icon li{
-        display:inline-block;
-        width:32%;
-    }
-    
-    .icon a:hover{
-        opacity: 0.7;
-    }
-    
     footer .box-3{
-        height: 150px;
-        vertical-align: top;
-        margin-top:20px;
+        display:block;
+        width:95%;
+        margin:10px auto;
+        height: auto;
     }
     
     footer .box-3 ul{
-        list-style: none;
-        text-align: left;
+        padding:3px 15px;
+        font-size: 1.5rem;
     }
-    
-    .center{
-        text-align: center;
-        width: 100%;
+
+    footer .box-3 h3{
+        padding:5px 10px;
     }
-    
+
     .center ul{
         list-style: none;
-        font-size: 1.3rem;
-    }
-    
-    #footer .center a:hover,#xmas-f .center a:hover{
-        text-decoration: underline;
-    }
-    
-    #footer .icon li a{
-        color:#054F52;
-    }
-    
-    #footer .box-3 h3{
-        font-size:1.5rem;
-        font-weight: 700;
-        background:#054F52;
-        text-align: left;
-        color:#FFF;
+        font-size: 1.2rem;
     }
     
     #footer .box-3 li a{
-        font-size: 1.3rem;
-        color:#054F52;
-        text-decoration: none;
+        font-size: 1.4rem;
     }
-    
-    #footer .center li{
-        display: inline;
-        width:auto;
-        border-left:solid 1px #054F52;
-        padding:0 5px;
-    }
-    
-    #footer .center li:last-child{
-        border-right: solid 1px #054F52;
-        padding: 0 5px;
-    }
-    
-    #footer .center a{
-        color:#054F52;
-        text-decoration: none;
-    }
-    
-    #footer p{
-        padding-top:10px;
-        text-align: center;
-        color:#054F52;
-    }
-    
+
     /*xmas2020*/
-    .bk-g{
-        background:#33cc66;
+
+    .xmas-h .drawer-open span,
+    .xmas-h .drawer-open span:before,
+    .xmas-h .drawer-open span:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 25px;
+      border-radius: 3px;
+      background: #FFF;
+      transition: 0.5s;
+      position: absolute;
     }
-    
-    .xmas-h{
-        width:100%;
-        background:rgba(255,89,89,0.7);
-        border-bottom:solid 4px #FFF;
-        text-align:center;
-    }
-    
-    .xmas-h .gnav li a{
-        color:#FFF;
-        font-size:2rem;
-        line-height: 2rem;
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        width: 100%;
-    }
-    
-    .xmas-h .gnav li a:hover{
-        background: rgba(255,255,255,0.5);
-    }
-    
-    .xmas-h .gnav li li {
-        background: rgba(255,89,89,0.7);
-        font-size:1.5rem;
-    }
-    
-    .xmas-h .gnav > li > ul:before{/*子階層*/
-        border: 5px solid transparent;
-        border-top: 5px solid #fff;
-        content: "";
-        right: 1rem;
-        position: absolute;
-        top: 1rem;
-        transform: translateY(-40%);
-    }
-    
-    .xmas-h .gnav > li {
-        border-left:solid 1px #FFF;
-    }
-    
-    .xmas-h .gnav > li:last-child{
-        border-right:solid 1px #FFF;
-    }
-    
-    #item, #price, #rank{
-        text-align: center;
-    }
+
+    /* メニューのデザイン*/
+   .xmas-h .drawer-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    z-index: 99;
+    background:rgba(255,89,89,0.7);
+    transition: .5s;
+  }
+
+  .xmas-h .drawer-list{
+      margin-top:20px;
+      color:#FFF;
+      font-size: 2rem;
+      text-align: left;
+      list-style-type: none;
+  }
+
+  .xmas-h .drawer-item a{
+      display: block;
+      width:85%;
+      margin-left:50px;
+      box-sizing: border-box;
+      text-align: left;
+      font-size:2rem;
+      color:#FFF;
+      text-decoration: none;
+
+  }
+
+  .xmas-h .drawer-item a:hover{
+      background:rgba(255,255,255,0.5);
+  }
+
     
     #about p{
         text-align: center;
-        font-size:1.8rem;
-    }
-    
-    #item p,#price p,#rank p{
         font-size:1.5rem;
-        line-height: 2.2rem;
-    }
-    
-    #item h2,#price h2,#rank h2{
-        font-size:2.2rem;
     }
     
     #item h3{
-        background:#33cc66;
-        color:#FFF;
-        font-size:2rem;
-        width:40%;
-        margin:10px auto;
-        border-radius: 10px;
-        font-weight: bold;
+        font-size:1.8rem;
+        width:50%;
     }
     
-    #item h3 a{
-        color:#FFF;
-        text-decoration: none;
-    }
-    
-    #item h3 a:hover{
-        text-decoration: underline;
-    }
-    
-    #xmas-f{
-        background:#FF5757;
-    
-    }
-    
-    #xmas-f .icon li a{
-        color:#FFF;
-    }
-    
-    #xmas-f .box-3 h3{
+    #rank .btn, #rank .btn a {
+        width:200px;
         font-size:1.5rem;
-        font-weight: 700;
-        background:#FFF;
-        text-align: left;
     }
-    
+
     #xmas-f .box-3 li a{
-        font-size: 1.3rem;
-        color:#FFF;
-        text-decoration: none;
+        font-size: 1.4rem;
     }
     
-    #xmas-f .center li{
-        display: inline;
-        width:auto;
-        border-left:solid 1px #FFF;
-        padding:0 5px;
-    }
-    
-    #xmas-f .center li:last-child{
-        border-right: solid 1px #FFF;
-        padding: 0 5px;
-    }
-    
-    #xmas-f .center a{
-        color:#FFF;
-        text-decoration: none;
-    }
-    
-    #xmas-f p{
-        padding-top:10px;
-        text-align: center;
-        color:#FFF;
-    }
 }
