@@ -589,6 +589,17 @@ footer .box-3 ul{
     box-shadow: none;
 }
 
+#rank .item{
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+#rank .small{
+    font-size:1.2rem;
+    text-align: left;
+    color:#555;
+}
+
 #xmas-f{
     background:#FF5757;
 
