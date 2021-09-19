@@ -1,52 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/slick.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
-    
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
-    <script type="text/javascript" src="js/func_slick.js"></script>
     <title>ZAKKA SHOP</title>
 </head>
+
 <body>
     <header class="header-bk">
-        <div class="header">
-            <div class="drawer">
-                <input type="checkbox" id="drawer-check" class="drawer-hidden" >
-            
-                <label for="drawer-check" class="drawer-open"><span></span></label>
-                <nav class="drawer-content">
-                  <ul class="drawer-list">
-                    <li class="drawer-item ml50">カテゴリ <i class="fas fa-caret-down"></i></li>
-                    <li class="drawer-item"><a href="#" class="small">生活雑貨</a></li>
-                    <li class="drawer-item"><a href="#" class="small">アクセサリー</a></li>
-                    <li class="drawer-item"><a href="#" class="small">メイク雑貨</a></li>
-                    <li class="drawer-item"><a href="#" class="small">携帯小物</a></li>
-                    <li class="drawer-item"><a href="#" class="small">バッグ</a></li>
-                    <li class="drawer-item"><a href="#" class="small">食品</a></li>
-                    <li class="drawer-item"><a href="#">特集一覧</a></li>
-                    <li class="drawer-item"><a href="#">店舗検索</a></li>
-                    <li class="drawer-item ml50">もっと見る <i class="fas fa-caret-down"></i></li>
-                    <li class="drawer-item"><a href="#" class="small">ニュース</a></li>
-                    <li class="drawer-item"><a href="#" class="small">会員登録</a></li>
-                    <li class="drawer-item"><a href="#" class="small">よくあるご質問</a></li>
-                    <li class="drawer-item"><a href="#" class="small">お問い合わせ</a></li>
-                    <li class="drawer-item"><a href="#" class="small">会社概要</a></li>
-                  </ul>
-                </nav>
-              </div>
-        <h1 class="logo"><a href="index.html"><img src="image/top.png" alt="ZAKKA SHOP"></a></h1>
+        <div class="logo">
+            <a href="#"><img src="img/top.png" alt="" srcset=""></a>
+        </div>
         <nav>
-            <ul class="gnav">
-                <li>
-                    <a href="#">カテゴリ</a>
+            <ul>
+                <li class="has-child"><a href="#">カテゴリ</a>
                     <ul>
-                        <li><a href="#">生活雑貨</a></li>
                         <li><a href="#">生活雑貨</a></li>
                         <li><a href="#">アクセサリー</a></li>
                         <li><a href="#">メイク雑貨</a></li>
@@ -57,8 +31,7 @@
                 </li>
                 <li><a href="#">特集一覧</a></li>
                 <li><a href="#">店舗検索</a></li>
-                <li>
-                    <a href="#">もっと見る</a>
+                <li class="has-child"><a href="#">もっと見る</a>
                     <ul>
                         <li><a href="#">ニュース</a></li>
                         <li><a href="#">会員登録</a></li>
@@ -69,322 +42,317 @@
                 </li>
             </ul>
         </nav>
-    </div>
     </header>
-    <main id="main">
-        <div class="con980">
-        <!--スライダーの記述-->
-        <ul class="slider">
-            <li><a href="#"><img src="image/main1.png"></a></li>
-            <li><a href="#"><img src="image/main2.png"></a></li>
-            <li><a href="#"><img src="image/main3.png"></a></li>
-        </ul>
-  <!--スライダーの記述ここまで-->
-
-        <div class="news m20">
-            <h2>News<span>ニュース</span></h2>
-            <div class="bg-g">
-            <p><a href="#">2020.12.20　年末年始の配送について</a></p>
-            <p><a href="#">2020.12.12　システムメンテナンスのお知らせ</a></p>
-            <p><a href="#">2020.11.10　営業再開後の感染拡大防止の取組について</a></p>
+    <main class="con980">
+        <section>
+            <ul class="slider">
+                <li class="slider-item">
+                    <a href="#"><img src="img/main1.png" alt=""></a>
+                </li>
+                <li class="slider-item">
+                    <a href="#"><img src="img/main2.png" alt=""></a>
+                </li>
+                <li class="slider-item">
+                    <a href="#"><img src="img/main3.png" alt=""></a>
+                </li>
             </ul>
-        </div>
-        </div>
-        <section id="banner" class="m20">
-            <a href="xmas2020.html" target="_blank" rel="noopener noreferrer"><img src="image/topic1.png" alt=""></a>
-            <a href="#" target="_blank" rel="noopener noreferrer"><img src="image/topic2.png" alt=""></a>
-            <a href="#" target="_blank" rel="noopener noreferrer"><img src="image/topic3.png" alt=""></a>
         </section>
-        <section id="ranking" class="m20">
+        <section class="pt-40">
+            <h2>News<span>ニュース</span></h2>
+            <div class="newsbox">
+                <ul>
+                    <li>2020.12.20　<a href="#">年末年始の配送について</a></li>
+                    <li>2020.12.12　<a href="#">システムメンテナンスのお知らせ</a></li>
+                    <li>2020.11.10　<a href="#">営業再開後の感染拡大防止の取組について</a></li>
+                </ul>
+                <p class="ta-right"><a href="#">過去のお知らせを見る≫</a></p>
+            </div>
+        </section>
+        <section id="bunner" class="pt-20 ta-center">
+            <a href="xmas/index.html"><img src="img/topic1.png" alt=""></a>
+            <a href="#"><img src="img/topic2.png" alt="" class="pt-10"></a>
+            <a href="#"><img src="img/topic3.png" alt="" class="pt-10"></a>
+        </section>
+        <section class="pt-40">
             <h2>Daily Ranking<span>デイリーランキング</span></h2>
-            <div class="box-warpper">
-                <div class="box-5">
-                    <div class="position">
-                        <p>1</p>
-                    <a href="#"><img src="image/2021.png" alt="福袋"></a>
-                </div>
-                <p class="item">2021年　福袋</p>
-                <p class="small">￥2,000（税込）</p>
-                </div>
-                <div class="box-5">
-                    <div class="position">
-                        <p>2</p>
-                    <a href="#"><img src="image/foo3.jpg" alt="クッキー"></a>
-                </div>
-                <p class="item">クッキーセット（クリスマス）</p>
-                <p class="small">￥950（税込）</p>
-                </div>
-                <div class="box-5">
-                    <div class="position">
-                        <p>3</p>
-                    <a href="#"><img src="image/mak2.jpg" alt="メイクポーチ"></a>
-                </div>
-                <p class="item">メイクポーチ</p>
-                <p class="small">￥1,260（税込）</p>
-                </div>
-                <div class="box-5">
-                    <div class="position">
-                        <p>4</p>
-                    <a href="#"><img src="image/fas1.jpg" alt="手袋"></a>
-                </div>
-                <p class="item">手袋</p>
-                <p class="small">￥1,100（税込）</p>
-                </div>
-                <div class="box-5">
-                    <div class="position">
-                        <p>5</p>
-                    <a href="#"><img src="image/car1.jpg" alt="時計"></a>
-                </div>
-                <p class="item">腕時計</p>
-                <p class="small">￥2,200（税込）</p>
-                </div>
-                <div class="box-5">
-                    <div class="position">
-                        <p>6</p>
-                    <a href="#"><img src="image/bag2.jpg" alt="バッグ"></a>
-                </div>
-                <p class="item">ミニバッグ</p>
-                <p class="small">￥2,800（税込）</p>
-                </div>
-                <div class="box-5">
-                    <div class="position">
-                        <p>7</p>
-                    <a href="#"><img src="image/acc2.png" alt="ピアス"></a>
-                </div>
-                <p class="item">ピアス</p>
-                <p class="small">￥1,800（税込）</p>
-                </div>
-                <div class="box-5">
-                    <div class="position">
-                        <p>8</p>
-                    <a href="#"><img src="image/fas2.jpg" alt="ニット帽"></a>
-                </div>
-                <p class="item">ニット帽</p>
-                <p class="small">￥1,260（税込）</p>
-                </div>
-                <div class="box-5">
-                    <div class="position">
-                        <p>9</p>
-                    <a href="#"><img src="image/fab2.jpg" alt="ブランケット"></a>
-                </div>
-                <p class="item">ブランケット</p>
-                <p class="small">￥2,000（税込）</p>
-                </div>
-                <div class="box-5">
-                    <div class="position">
-                        <p>10</p>
-                    <a href="#"><img src="image/fab1.png" alt="靴下"></a>
-                </div>
-                <p class="item">あったか靴下</p>
-                <p class="small">￥980（税込）</p>
-                </div>
+            <div class="flex-wrap pt-20">
+                <ul class="ranking">
+                    <li>
+                        <a href="#"><img src="img/2021.png" alt="福袋"></a>
+                        <p class="item">2021年　福袋<br><span>￥2,000（税込）</span></p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/foo3.jpg" alt="クッキー"></a>
+                        <p class="item">クッキー（クリスマス）<br><span>￥950（税込）</span></p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/mak2.jpg" alt="メイクポーチ"></a>
+                        <p class="item">メイクポーチ<br><span>￥1,260（税込）</span></p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/fas1.jpg" alt="無地グローブ"></a>
+                        <p class="item">無地グローブ<br><span>￥1,100（税込）</span></p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/car1.jpg" alt="時計"></a>
+                        <p class="item">腕時計<br><span>￥2,200（税込）</span></p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/bag2.jpg" alt="バッグ"></a>
+                        <p class="item">ミニバッグ<br><span>￥2,800（税込）</span></p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/acc2.png" alt="ピアス"></a>
+                        <p class="item">ピアス<br><span>￥1,800（税込）</span></p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/fas2.jpg" alt="ニットキャップ"></a>
+                        <p class="item">ニットキャップ<br><span>￥1,260（税込）</span></p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/fab2.jpg" alt="ブランケット"></a>
+                        <p class="item">ブランケット<br><span>￥2,000（税込）</span></p>
+                    </li>
+                </ul>
             </div>
-            <div class="btn"><a href="#">more</a></div>
+            <a href="#" class="button">more</a>
         </section>
-        <section id="pickup" class="m20">
+        <section class="pt-40">
             <h2>Pickup Items<span>おすすめアイテム</span></h2>
-            <div class="box-warpper">
-                <div class="box-5">
-                    <a href="#"><img src="image/acc3.jpg" alt="ピアス"></a>
-                    <p class="item">シェルピアス</p>
-                    <p class="small">￥1,500（税込）</p>
+            <div class="flex-wrap pt-20">
+                <div class="box_4">
+                    <a href="#">
+                        <div class="hover">
+                            <img src="img/acc3.jpg" alt="シェルピアス" />
+                            <div class="mask">
+                                <div class="caption">シェルピアス<br>￥1,500（税込）</div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/acc1.png" alt="指輪"></a>
-                    <p class="item">リング</p>
-                    <p class="small">￥1,200（税込）</p>
+                <div class="box_4">
+                    <a href="#">
+                        <div class="hover">
+                            <img src="img/acc1.png" alt="リング" />
+                            <div class="mask">
+                                <div class="caption">リング<br>￥￥1,200（税込）</div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/mak1.jpg" alt="ブラシセット"></a>
-                    <p class="item">ブラシセット</p>
-                    <p class="small">￥800（税込）</p>
+                <div class="box_4">
+                    <a href="#">
+                        <div class="hover">
+                            <img src="img/mak1.jpg" alt="ブラシセット" />
+                            <div class="mask">
+                                <div class="caption">ブラシセット<br>￥800（税込）</div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/bag1.jpg" alt="トートバッグ"></a>
-                    <p class="item">トートバッグ</p>
-                    <p class="small">￥1,100（税込）</p>
-                </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/car2.png" alt="財布"></a>
-                    <p class="item">財布</p>
-                    <p class="small">￥1,200（税込）</p>
-                </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/acc4.jpg" alt="眼鏡"></a>
-                    <p class="item">サンカット眼鏡</p>
-                    <p class="small">￥2,000（税込）</p>
+                <div class="box_4">
+                    <a href="">
+                        <div class="hover">
+                            <img src="img/bag1.jpg" alt="トートバッグ" />
+                            <div class="mask">
+                                <div class="caption">トートバッグ<br>￥1,100（税込）</div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="btn"><a href="#">more</a></div>
+            <div class="mt-10">
+                <a href="#" class="button">more</a>
+            </div>
         </section>
-        <section id="new" class="m20">
+        <section class="pt-40">
             <h2>New Items<span>新商品</span></h2>
-            <div class="box-warpper">
-                <div class="box-5">
-                    <a href="#"><img src="image/2021.png" alt="福袋"></a>
-                    <p class="item">2021年　福袋</p>
-                    <p class="small">￥2,000（税込）</p>
+            <div class="flex-wrap pt-20">
+                <div class="box_4">
+                    <a href="#"><img src="img/2021.png" alt="2021年　福袋" /></a>
+                    <p class="item">2021年　福袋<br><span>￥2,000（税込）</span></p>
                 </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/mak2.jpg" alt="メイクポーチ"></a>
-                    <p class="item">メイクポーチ</p>
-                    <p class="small">￥1,260（税込）</p>
+                <div class="box_4">
+                    <a href="#"><img src="img/mak2.jpg" alt="メイクポーチ" /></a>
+                    <p class="item">メイクポーチ<br><span>￥1,260（税込）</span></p>
                 </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/foo3.jpg" alt="クッキー"></a>
-                    <p class="item">クッキーセット（クリスマス）</p>
-                    <p class="small">￥950（税込）</p>
+                <div class="box_4">
+                    <a href="#"><img src="img/foo3.jpg" alt="クッキー（クリスマス）" /></a>
+                    <p class="item">クッキー（クリスマス）<br><span>￥950（税込）</span></p>
                 </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/acc3.jpg" alt="ピアス"></a>
-                    <p class="item">シェルピアス</p>
-                    <p class="small">￥1,500（税込）</p>
+                <div class="box_4">
+                    <a href="#"><img src="img/acc3.jpg" alt="シェルピアス" /></a>
+                    <p class="item">シェルピアス<br><span>￥1,500（税込）</span></p>
                 </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/fab3.jpg" alt="マグカップ"></a>
-                    <p class="item">マグカップ</p>
-                    <p class="small">￥1,000（税込）</p>
+                <div class="box_4">
+                    <a href="#"><img src="img/fab3.jpg" alt="マグカップ" /></a>
+                    <p class="item">マグカップ<br><span>￥1,000（税込）</span></p>
                 </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/fab5.jpg" alt="ランチボックス"></a>
-                    <p class="item">ランチボックス</p>
-                    <p class="small">￥2,200（税込）</p>
+                <div class="box_4">
+                    <a href="#"><img src="img/fab5.jpg" alt="ランチボックス" /></a>
+                    <p class="item">ランチボックス<br><span>￥2,200（税込）</span></p>
                 </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/car3.jpg" alt="腕時計"></a>
-                    <p class="item">腕時計</p>
-                    <p class="small">￥2,400（税込）</p>
+                <div class="box_4">
+                    <a href="#"><img src="img/car3.jpg" alt="腕時計" /></a>
+                    <p class="item">腕時計<br><span>￥2,400（税込）</span></p>
                 </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/fab4.jpg" alt="タンブラー"></a>
-                    <p class="item">タンブラー</p>
-                    <p class="small">￥980（税込）</p>
-                </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/acc4.jpg" alt="眼鏡"></a>
-                    <p class="item">サンカット眼鏡</p>
-                    <p class="small">￥2,000（税込）</p>
-                </div>
-                <div class="box-5">
-                    <a href="#"><img src="image/car4.jpg" alt="腕時計"></a>
-                    <p class="item">腕時計</p>
-                    <p class="small">￥2,800（税込）</p>
+                <div class="box_4">
+                    <a href="#"><img src="img/acc4.jpg" alt="サンカット眼鏡" /></a>
+                    <p class="item">サンカット眼鏡<br><span>￥2,000（税込）</span></p>
                 </div>
             </div>
-            <div class="btn"><a href="#">more</a></div>
+            <div class="mt-10">
+                <a href="#" class="button">more</a>
+            </div>
         </section>
-    </div>
-    <hr class="zakka m20">
-    <div class="con980">
-        <section id="service" class="m20">
+        <hr class="mt-40">
+        <section class="pt-40">
             <h2>Online Store Service<span>サービス</span></h2>
-            <div class="box-warpper m20">
-            <div class="box-4">
-                <div class="service">
-                    <i class="fas fa-truck fa-5x m20"></i>
-                    <p class="m20">合計金額5,000円以上で<br>送料無料</p>
+            <div class="flex-wrap pt-20">
+                <div class="box_4 border-g">
+                    <i class="fas fa-truck fa-5x mt-20"></i>
+                    <p class="mt-20">合計金額5,000円以上で<br>送料無料</p>
+                </div>
+                <div class="box_4 border-g">
+                    <i class="fas fa-gift fa-5x mt-20"></i>
+                    <p class="mt-20">ラッピングサービス<br>対応</p>
+                </div>
+                <div class="box_4 border-g">
+                    <i class="fab fa-product-hunt fa-5x mt-20"></i>
+                    <p class="mt-20">1ポイント1円で利用可能<br>会員限定ポイント</p>
+                </div>
+                <div class="box_4 border-g">
+                    <i class="fas fa-mobile-alt fa-5x mt-20"></i>
+                    <p class="mt-20">＼ Andoroid対応 ／<br>公式アプリ</p>
                 </div>
             </div>
-            <div class="box-4">
-                <div class="service">
-                    <i class="fas fa-gift fa-5x m20"></i>
-                    <p class="m20">ラッピングサービス<br>対応</p>
-                </div>
+            <div class="mt-20">
+                <a href="#" class="button">詳細はこちら</a>
             </div>
-            <div class="box-4">
-                <div class="service">
-                    <i class="fab fa-product-hunt fa-5x m20"></i>
-                    <p class="m20">1ポイント1円で利用可能<br>会員限定ポイント</p>
-                </div>
-            </div>
-            <div class="box-4">
-                <div class="service">
-                    <i class="fas fa-mobile-alt fa-5x m20"></i>
-                    <p class="m20">＼ Andoroid対応 ／<br>公式アプリ</p>
-                </div>
-            </div>
-        </div>
-        <div class="btn2"><a href="#">詳細はこちら</a></div>
-        </section>
-        <section id="other">
-            <div class="box-warpper m20">
-                <div class="box-2 bg-b">
-                        <h2>Instagram<span>インスタグラム</span></h2>
-                        <p>店舗ごとに更新しております。お近くの店舗をご覧ください！</p>
-                        <div class="box-3">
+            <div class="flex-wrap mt-20">
+                <div class="box_2 bg-b">
+                    <h3>Instagram<span>インスタグラム</span></h3>
+                    <p>店舗ごとに更新しております。お近くの店舗をご覧ください！</p>
+                    <div class="flex-wrap pt-10">
+                        <div class="box_3">
                             <a href="#" class="circle">渋谷店</a>
                         </div>
-                        <div class="box-3">
+                        <div class="box_3">
                             <a href="#" class="circle">柏店</a>
                         </div>
-                        <div class="box-3">
+                        <div class="box_3">
                             <a href="#" class="circle">横浜店</a>
                         </div>
+                    </div>
                 </div>
-                <div class="box-2 bg-b">
-                    <h2>Mail Magazin<span>メールマガジン</span></h2>
-                    <p>週1回新着情報や再入荷アイテム、<br>
-                        お役立ち情報などを配信しております！<br>
-                        購読は無償ですので、お気軽の購読ください！
-                    </p>
-                        <div class="p20">
-                            <a href="#" class="btn2">購読する</a>
-                        </div>
+                <div class="box_2 bg-b">
+                    <h3>Mail Magazin<span>メールマガジン</span></h3>
+                    <p>週1回新着情報や再入荷アイテム、お役立ち情報などを配信しております！<br>購読は無償ですので、お気軽にご購読ください！</p>
+                    <div class="mt-20">
+                        <a href="#" class="button2">購読する</a>
+                    </div>
                 </div>
             </div>
+            <p id="page-top">
+                <a href="#"></a>
+            </p>
         </section>
-    </div>
     </main>
-    <footer id="footer" class="con980">
-        <ul class="icon">
-            <li><a href="#"><i class="fab fa-twitter fa-3x"></i></a></li>
-            <li><a href="#"><i class="fab fa-facebook-square fa-3x"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
-        </ul>
-        <div class="box-warpper">
-            <div class="box-3">
-                <h3>カテゴリ</h3>
-                <ul>
-                    <li><a href="#">ファッション雑貨</a></li>
-                    <li><a href="#">生活雑貨</a></li>
-                    <li><a href="#">アクセサリー</a></li>
-                    <li><a href="#">メイク雑貨</a></li>
-                    <li><a href="#">携帯小物</a></li>
-                    <li><a href="#">バッグ</a></li>
-                    <li><a href="#">食品</a></li>
+    <footer>
+        <div class="con980">
+            <div class="flex-wrap">
+                <div class="footer_box">
+                    <h4><i class="fas fa-shopping-basket"></i>カテゴリ</h4>
+                    <ul>
+                        <li>
+                            <a href="#">ファッション雑貨</a>
+                        </li>
+                        <li>
+                            <a href="#">生活雑貨</a>
+                        </li>
+                        <li>
+                            <a href="#">アクセサリー</a>
+                        </li>
+                        <li>
+                            <a href="#">メイク雑貨</a>
+                        </li>
+                        <li>
+                            <a href="#">携帯小物</a>
+                        </li>
+                        <li>
+                            <a href="#">バッグ</a>
+                        </li>
+                        <li>
+                            <a href="#">食品</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_box">
+                    <h4><i class="fas fa-question-circle"></i>ガイド</h4>
+                    <ul>
+                        <li>
+                            <a href="#">会員登録</a>
+                        </li>
+                        <li>
+                            <a href="#">メールマガジン</a>
+                        </li>
+                        <li>
+                            <a href="#">お支払いについて</a>
+                        </li>
+                        <li>
+                            <a href="#">お届けについて</a>
+                        </li>
+                        <li>
+                            <a href="#">配送料金について</a>
+                        </li>
+                        <li>
+                            <a href="#">返品について</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_box">
+                    <h4><i class="fas fa-building"></i>会社情報</h4>
+                    <ul>
+                        <li>
+                            <a href="#">アルバイト</a>
+                        </li>
+                        <li>
+                            <a href="#">新卒採用</a>
+                        </li>
+                        <li>
+                            <a href="#">中途採用</a>
+                        </li>
+                        <li>
+                            <a href="#">会社概要</a>
+                        </li>
+                        <li>
+                            <a href="#">沿革</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_box">
+                    <h4><i class="fas fa-laptop"></i>SNS</h4>
+                    <div class="flex-wrap pt-10">
+                        <div class="box_3"><a href="#"><i class="fab fa-twitter fa-3x"></i></a></div>
+                        <div class="box_3"><a href="#"><i class="fab fa-facebook-square fa-3x"></i></a></div>
+                        <div class="box_3"><a href="#"><i class="fab fa-instagram fa-3x"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-wrap">
+                <ul class="footer-nav">
+                    <li><a href="#">サイトマップ</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                    <li><a href="#">サイトポリシー</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
                 </ul>
             </div>
-            <div class="box-3">
-                <h3>ガイド</h3>
-                <ul>
-                    <li><a href="#">会員登録</a></li>
-                    <li><a href="#">メールマガジン</a></li>
-                    <li><a href="#">お支払いについて</a></li>
-                    <li><a href="#">お届けについて</a></li>
-                    <li><a href="#">配送料金について</a></li>
-                    <li><a href="#">返品について</a></li>
-                </ul>
-            </div>
-            <div class="box-3">
-                <h3>会社情報</h3>
-                <ul>
-                    <li><a href="#">アルバイト</a></li>
-                    <li><a href="#">新卒採用</a></li>
-                    <li><a href="#">中途採用</a></li>
-                    <li><a href="#">会社概要</a></li>
-                    <li><a href="#">沿革</a></li>
-                </ul>
-            </div>
+            <p>Copyright &copy; 2020 ZAKKA SHOP. All RIGHT RESERVED.</p>
         </div>
-        <div class="center">
-            <ul>
-                <li><a href="#">サイトマップ</a></li>
-                <li><a href="#">プライバシーポリシー</a></li>
-                <li><a href="#">サイトポリシー</a></li>
-                <li><a href="#">お問い合わせ</a></li>
-            </ul>
-        </div>
-        <p>Copyright (C) 2020 ZAKKA SHOP. All RIGHT RESERVED.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
