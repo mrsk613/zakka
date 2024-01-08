@@ -251,20 +251,28 @@ h1::after {
   border-right-color: #e6dcca;
 }
 
+.circle_flex {
+  display: inline-block;
+  margin: 0.5rem auto;
+  width: calc(33.3% - 2rem);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .flex_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   margin: 0 auto;
   padding: 0 auto;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   text-align: center;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .flex-1-2 {
@@ -272,16 +280,15 @@ h1::after {
   margin: 0.5em;
   width: calc(50% - 1em);
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.flex-1-3,
-.circle_flex {
+.flex-1-3 {
   display: inline-block;
   margin: 0.5rem;
   width: calc(33.3% - 1rem);
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .flex-1-4 {
@@ -289,7 +296,7 @@ h1::after {
   margin: 0.5rem;
   width: calc(25% - 1rem);
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul {
@@ -345,12 +352,11 @@ ul {
     width: 95%;
     margin: 0 auto;
   }
-}
 
-@media screen and (max-width: 426px) {
   .flex-1-2,
   .flex-1-4,
   .flex-1-3 {
+    display: block;
     width: 90%;
     margin: 0.5em auto;
   }
@@ -410,7 +416,6 @@ hr {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
-  text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -436,7 +441,6 @@ hr {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
-  text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -446,27 +450,26 @@ hr {
 }
 
 #header {
-  height: 70px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: #fff;
   color: #054f52;
   text-align: center;
-  padding: 60px 40px;
+  padding: 20px 40px;
 }
 
 #menu {
@@ -486,7 +489,6 @@ hr {
 #menu li a {
   display: block;
   color: #054f52;
-  text-decoration: none;
 }
 
 #menu li p {
@@ -565,7 +567,7 @@ hr {
 }
 
 .logo img {
-  width: 40%;
+  width: 35%;
   display: block;
 }
 
@@ -591,7 +593,7 @@ hr {
 
 @media screen and (max-width: 620px) {
   #header {
-    padding: 60px 20px;
+    padding: 20px;
   }
   #menu {
     position: fixed;
@@ -682,7 +684,6 @@ hr {
     color: #054f52;
     font-weight: bold;
     font-size: 1.2em;
-    text-decoration: none;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
@@ -724,7 +725,7 @@ hr {
     top: 18px;
     left: 18px;
     -webkit-transform: translateY(6px) rotate(-45deg);
-            transform: translateY(6px) rotate(-45deg);
+    transform: translateY(6px) rotate(-45deg);
     width: 30%;
   }
   #navibtn.active span:nth-of-type(2) {
@@ -734,7 +735,7 @@ hr {
     top: 30px;
     left: 18px;
     -webkit-transform: translateY(-6px) rotate(45deg);
-            transform: translateY(-6px) rotate(45deg);
+    transform: translateY(-6px) rotate(45deg);
     width: 30%;
   }
 }
@@ -742,14 +743,16 @@ hr {
 .slider_wrap {
   background-image: url("img/background.png");
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 55%;
   background-position: 50% 8%;
-  margin: 20px;
+  margin: 120px auto 0;
 }
 
 .slider {
   position: relative;
   height: 100vh;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .slider-item01 {
@@ -769,7 +772,7 @@ hr {
 
 .slider-item {
   width: 100%;
-  height: 90vh;
+  height: 86vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
@@ -787,7 +790,7 @@ hr {
 
 .slider_02 .slick-slide {
   -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
   /*左右の画像のサイズを80%に*/
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -798,7 +801,7 @@ hr {
 
 .slider_02 .slick-slide.slick-center {
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
   /*中央の画像のサイズだけ等倍に*/
   opacity: 1;
   /*透過なし*/
@@ -846,17 +849,18 @@ hr {
 
 @media screen and (max-width: 768px) {
   .slider_wrap {
-    background-size: 80%;
-    background-position: 65% 34%;
+    background-size: 90%;
+    background-position: 48% 33%;
     height: 600px;
   }
   .slider-item {
-    height: 60vh;
+    height: 62vh;
   }
   .slider-item01,
   .slider-item02,
   .slider-item03 {
-    background-size: 65%;
+    background-size: 87%;
+    margin: 0 auto;
   }
   .slider_02 {
     width: 100%;
@@ -924,9 +928,7 @@ hr {
   .right_button i {
     font-size: 1.5rem;
   }
-}
 
-@media screen and (max-width: 426px) {
   .right_button {
     display: none;
   }
@@ -1007,7 +1009,7 @@ hr {
   height: 9px;
   background: #363636;
   -webkit-transform: skewX(45deg);
-          transform: skewX(45deg);
+  transform: skewX(45deg);
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
@@ -1033,7 +1035,7 @@ hr {
   max-height: 80%;
   overflow: hidden;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 10000;
 }
 
@@ -1066,13 +1068,13 @@ hr {
 .md-xmark span:nth-of-type(1) {
   top: 0;
   -webkit-transform: translateY(10px) rotate(-45deg);
-          transform: translateY(10px) rotate(-45deg);
+  transform: translateY(10px) rotate(-45deg);
 }
 
 .md-xmark span:nth-of-type(2) {
   bottom: 0;
   -webkit-transform: translateY(-10px) rotate(45deg);
-          transform: translateY(-10px) rotate(45deg);
+  transform: translateY(-10px) rotate(45deg);
 }
 
 @media screen and (max-width: 768px) {
@@ -1084,9 +1086,7 @@ hr {
     width: 100%;
     margin: 0 auto;
   }
-}
 
-@media screen and (max-width: 426px) {
   .md-contents {
     top: 10%;
     max-height: 80%;
@@ -1143,7 +1143,7 @@ hr {
   /* 画像のスタイル */
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .ranking li .item {
@@ -1273,7 +1273,7 @@ hr {
   padding: 20px;
   color: #fff;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .bk_orange h3 {
@@ -1298,7 +1298,7 @@ a.circle {
   text-align: center;
   overflow: hidden;
   -webkit-box-shadow: 0px 0px 0px 5px #fff;
-          box-shadow: 0px 0px 0px 5px #fff;
+  box-shadow: 0px 0px 0px 5px #fff;
   border: dashed 1px #054f52;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -1319,7 +1319,6 @@ a.circle:hover {
   padding: 0.5em 0;
   margin: 0 auto;
   font-size: 18px;
-  text-decoration: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   font-weight: bold;
@@ -1357,7 +1356,7 @@ a.circle:hover {
 #footer {
   background: #fff;
   -webkit-box-shadow: 0px 0px 0px 20px #fff;
-          box-shadow: 0px 0px 0px 20px #fff;
+  box-shadow: 0px 0px 0px 20px #fff;
   border-top: dashed 5px #054f52;
 }
 
@@ -1388,7 +1387,6 @@ a.circle:hover {
   font-size: 1.2em;
   font-weight: bold;
   color: #363636;
-  text-decoration: none;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -1412,7 +1410,6 @@ a.circle:hover {
 #footer .footer_nav li a {
   color: #054f52;
   font-size: 0.9em;
-  text-decoration: none;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -1439,24 +1436,24 @@ a.circle:hover {
   z-index: 2;
   opacity: 0;
   -webkit-transform: translateY(150px);
-          transform: translateY(150px);
+  transform: translateY(150px);
 }
 
 #page-top.UpMove {
   -webkit-animation: UpAnime 0.5s forwards;
-          animation: UpAnime 0.5s forwards;
+  animation: UpAnime 0.5s forwards;
 }
 
 @-webkit-keyframes UpAnime {
   from {
     opacity: 0;
     -webkit-transform: translateY(150px);
-            transform: translateY(150px);
+    transform: translateY(150px);
   }
   to {
     opacity: 1;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -1464,30 +1461,30 @@ a.circle:hover {
   from {
     opacity: 0;
     -webkit-transform: translateY(150px);
-            transform: translateY(150px);
+    transform: translateY(150px);
   }
   to {
     opacity: 1;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 #page-top.DownMove {
   -webkit-animation: DownAnime 0.5s forwards;
-          animation: DownAnime 0.5s forwards;
+  animation: DownAnime 0.5s forwards;
 }
 
 @-webkit-keyframes DownAnime {
   from {
     opacity: 1;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   to {
     opacity: 1;
     -webkit-transform: translateY(150px);
-            transform: translateY(150px);
+    transform: translateY(150px);
   }
 }
 
@@ -1495,20 +1492,20 @@ a.circle:hover {
   from {
     opacity: 1;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   to {
     opacity: 1;
     -webkit-transform: translateY(150px);
-            transform: translateY(150px);
+    transform: translateY(150px);
   }
 }
 
 #page-top a {
   /*aタグの形状*/
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   color: #333;
   text-align: center;
   text-transform: uppercase;
@@ -1519,33 +1516,33 @@ a.circle:hover {
 }
 
 #page-top.floatAnime a {
-  width: 100px;
-  height: 130px;
+  width: 60px;
+  height: 90px;
   background: url("img/pagetop_2.png") no-repeat center;
   background-size: contain;
   -webkit-animation: floatAnime 2s linear infinite;
-          animation: floatAnime 2s linear infinite;
+  animation: floatAnime 2s linear infinite;
   opacity: 0;
 }
 
 @-webkit-keyframes floatAnime {
   0% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 0;
   }
   25% {
     -webkit-transform: translateX(-6px);
-            transform: translateX(-6px);
+    transform: translateX(-6px);
     opacity: 1;
   }
   50% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
     -webkit-transform: translateX(6px);
-            transform: translateX(6px);
+    transform: translateX(6px);
     opacity: 1;
   }
 }
@@ -1553,21 +1550,21 @@ a.circle:hover {
 @keyframes floatAnime {
   0% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 0;
   }
   25% {
     -webkit-transform: translateX(-6px);
-            transform: translateX(-6px);
+    transform: translateX(-6px);
     opacity: 1;
   }
   50% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
     -webkit-transform: translateX(6px);
-            transform: translateX(6px);
+    transform: translateX(6px);
     opacity: 1;
   }
 }
